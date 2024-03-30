@@ -42,4 +42,4 @@ Rename `jsx_version` to `jsx_version_`
 
 6. Run dune fmt `dune build @fmt --auto-promote`
 
-7. Some nominations were not good, they are few and can be done by the editor manually.
+7. Some renames were not good, they are few and can be done by the editor manually.

@@ -58,7 +58,6 @@ function formatCaptures(tree, captures) {
     const node = c.node;
     const { startPosition, endPosition } = node;
     delete c.node;
-    // c.text = tree.getText(node);
     return { text: tree.getText(node), startPosition, endPosition };
   });
 }
@@ -71,19 +70,13 @@ function isCamelCase(text) {
   if (/[A-Z]/.test(text)) {
     // Check if the first character is lowercase and there's at least one uppercase letter
     if (/^[a-z][a-zA-Z|0-9]*$/.test(text)) {
-      return true; // It's in camelCase
+      return true;
     }
   }
-  return false; // Not in camelCase
+  return false;
 }
 
 function applyRenameFile(file) {
-  // if (file.path.endsWith(".mli")) {
-  //   parser.setLanguage(Interface);
-  // } else {
-  //   parser.setLanguage(Implementation);
-  // }
-
   let tree;
 
   const isInterface = file.path.endsWith(".mli");
